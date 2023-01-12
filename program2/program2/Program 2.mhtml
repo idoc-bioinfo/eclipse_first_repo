@@ -1,0 +1,1137 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.ics.uci.edu/~pattis/ICS-33/assignments/program2/program.html
+Subject: Program 2
+Date: Thu, 5 Jan 2023 09:00:37 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--KTcUM7OkyDOTBCPJpRVklconWYks9bgTEvMarrToEW----"
+
+
+------MultipartBoundary--KTcUM7OkyDOTBCPJpRVklconWYks9bgTEvMarrToEW----
+Content-Type: text/html
+Content-ID: <frame-BCDA3D6B53F76B42311B74670CBB6C9A@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://www.ics.uci.edu/~pattis/ICS-33/assignments/program2/program.html
+
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN"><html><head><meta http-equiv=
+=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><link rel=3D"style=
+sheet" type=3D"text/css" href=3D"cid:css-d3e5db17-6935-4222-bbd2-740cec8bdc=
+c9@mhtml.blink" />
+  <title>Program 2</title>
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com/" crossorigin=
+=3D"true"><link rel=3D"preconnect" href=3D"https://fonts.gstatic.com/"><lin=
+k rel=3D"stylesheet" href=3D"https://fonts.googleapis.com/css2?family=3DMul=
+ish:wght@200;300;400;500;600;700;800;900&amp;display=3Dswa"></head>
+<body bgcolor=3D"white">
+
+<center>
+<h1>Program 2</h1>
+<h1>
+Classes, Overloaded Operators, and Iterators
+</h1>
+<p>
+</p><h2>ICS-33: Intermediate Programming<br>
+</h2>
+<p>
+</p></center>
+
+
+<!-- Introduction -->
+
+<a name=3D"Introduction">
+<hr align=3D"left" width=3D"33%">
+<table cellspacing=3D"0" cellpadding=3D"5" border=3D"0" rules=3D"none" widt=
+h=3D"100%">
+<tbody>
+<tr valign=3D"top">
+<td width=3D"20%"><b>Introduction</b></td>
+<td width=3D"80%">
+This programming assignment is designed first to ensure that you know how t=
+o
+  write classes that overload many of the standard Python operators by defi=
+ning
+  various double-underscore methods.
+It also ensures that you know how to write classes that implement iterators=
+,
+  by defining an <b>__iter__</b> method that returns an object that we/Pyth=
+on
+  can call <b>__next__</b> on.
+<b>These Iterators are covered near the end of the due date for this projec=
+t;
+  skip writing these functions (only in the first class) until the material=
+ is
+  covered in class, or read ahead.</b>
+<p>
+You should download the <a href=3D"https://www.ics.uci.edu/~pattis/ICS-33/a=
+ssignments/program2/program2.zip">program2</a> project folder and
+  unzip it to produce an Eclipse project with two modules.
+You will write classes in these modules, which can be tested in the script =
+and
+  using the standard driver using the batch self-check files that I supplie=
+d.
+Eventually you will submit each of these modules you write separately to
+  Checkmate.
+</p><p>
+I recommend that you work on this assignment in pairs, and I recommend that=
+ you
+  work with someone in your lab section (so that you have 4 hours each week=
+ of
+  scheduled time together).
+These are just recommendations.
+Try to find someone who lives near you, with similar programming skills,
+  and work habits/schedule: e.g., talk about whether you prefer to work
+  mornings, nights, or weekends; what kind of commitment you will make to s=
+ubmit
+  program early.
+<!---
+If you believe that it is impossible for you to work with someone, because =
+of
+  some special reason(s), you should send me email stating them and asking =
+for
+  special permission to work alone (which I do grant, but not frequently).
+--->
+</p><p>
+<b>Only one student should submit all parts of the the assignment</b>, but =
+both
+  students' UCInetID and name should appear in a comment at the <b>top</b> =
+of
+  <b>each submitted .py file</b>.
+A special grading program reads this information.
+The format is a comment starting with <b>Submitter</b> and <b>Partner</b> (=
+when
+  working with a partner), followed by a <b>colon</b>, followed by the stud=
+ent's <b>UCInetID</b> (in all lower-case), followed by the student's <b>nam=
+e in
+  parentheses</b> (last name, comma, first name -capitalized appropriately)=
+.
+If you omit this information, or do not follow this exact form, it will req=
+uire
+  extra work for us to grade your program, so we will deduct points.
+Note: if you are submitting by yourself, and do <b>NOT</b> have a partner, =
+you
+  should <b>OMIT</b> the partner line and the "...certify" sentence.
+</p><p>
+For example if Romeo Montague (whose UCInetID is romeo1) submitted a progra=
+m
+  that he worked on with his partner Juliet Capulet (whose UCInetID is jcap=
+ulet)
+  the comment at the top of each .py file would appear as:
+</p><pre><b># Submitter: romeo1(Montague, Romeo)
+# Partner  : jcapulet(Capulet, Juliet)
+# We certify that we worked cooperatively on this programming
+#   assignment, according to the rules for pair programming</b></pre>
+If you do not know what the terms <b>cooperatively</b> and/or
+  <b>rules for pair programming</b> mean, please read about
+  <a href=3D"https://www.ics.uci.edu/~pattis/common/handouts/pairprogrammin=
+g.html">Pair Programming</a>=20
+  <b>before</b> starting this assignment.
+Please turn in each program <b>as you finish it</b>, so that I can more
+  accurately assess the progress of the class as a whole during this assign=
+ment.
+<p>
+Print this document and carefully read it, marking any parts that contain
+  important detailed information that you find (for review before you turn =
+in
+  the files).
+The code you write should be as compact and elegant as possible, using=20
+  appropriate Python idioms.
+</p></td>
+</tr></tbody>
+</table>
+
+
+<!-- Problem 1 -->
+
+</a><a name=3D"problem6">
+<hr align=3D"left" width=3D"33%">
+<table cellspacing=3D"0" cellpadding=3D"5" border=3D"0" rules=3D"none" widt=
+h=3D"100%">
+<tbody>
+<tr valign=3D"top">
+<td width=3D"20%"><b>Problem #1: Bag Class</b></td>
+<td width=3D"80%">
+<h3>Problem Summary:</h3>
+Write a class that represents and defines methods, operators, and an iterat=
+or
+  for the <b>Bag</b> class.
+Bags are similar to sets, and have similar operations (of which we will
+  implement just the most important) but unlike sets they can store multipl=
+e
+  copies of items.
+We will store the information in bags as dictionaries (I suggest using a=20
+   <b>defaultdict</b>) whose keys are associated with <b>int</b> values tha=
+t
+   specify the number of times the key occurs in the <b>Bag</b>.
+<b>You must store Bags using this one data structure, as specified</b>
+<h3>Details</h3>
+<ol>
+<li>Define a class named <b>Bag</b> in a module named <b>bag.py</b>
+<p>
+</p></li><li>Define an <b>__init__</b> method that has one parameter, an it=
+erable of
+       values that initalize the bag.
+    Writing <b>Bag()</b> constructs an empty bag.
+    Writing <b>Bag(['d','a','b','d','c','b','d'])</b> construct a bag with
+      one <b>'a'</b>, two <b>'b'</b>s, one <b>'c'</b>, and three <b>'d'</b>=
+s.
+    Objects in the <b>Bag</b> class should store only the dictionary specif=
+ied
+      above: it should <b>not</b> store/manipulate any other <b>self</b>
+      variables.
+<p>
+</p></li><li>Define a <b>__repr__</b> method that returns a string, which w=
+hen passed to
+       <b>eval</b> returns a newly constructed bag with the same value
+       (<b>=3D=3D</b>) to the object <b>__repr__</b> was called on.
+    For example, for the <b>Bag</b> in the discussion of <b>__init__</b> th=
+e
+        <b>__repr__</b> method would print its result as
+       <b>Bag(['a', 'c', 'b', 'b', 'd', 'd', 'd'])</b>.
+    Bags like sets are not sorted, so these 7 values can appear in any orde=
+r.
+    We might require that information in the list is sorted, but not all va=
+lues
+      we might put in a bag may be ordered (and therefore not sortable): e.=
+g.,
+      a bag storing both string and int values, <b>Bag(['a',1])</b> which i=
+s
+      allowed.
+    <p>
+    <b>Note</b>: This method is used to test several other methods/operator=
+s
+       in the batch self-check file; so it is critical to write it correctl=
+y.
+</p><p>
+</p></li><li>Define a <b>__str__</b> method that returns a string that more=
+ compactly
+      shows a bag.
+    For example, for the <b>Bag</b> in the discussion of <b>__init__</b> th=
+e
+        <b>__str__</b> method would print its result as
+       <b>Bag(a[1], c[1], b[2], d[3])</b>.
+    Bags like sets are not sorted, so these 7 values can appear in any orde=
+r.
+<p>
+</p></li><li>Define a <b>__len__</b> method that returns the total number o=
+f values in
+      the <b>Bag</b>.
+    For example, for the <b>Bag</b> in the discussion of <b>__init__</b> th=
+e
+        <b>__len__</b> method would return <b>7</b>.
+<p>
+</p></li><li>Define a <b>unique</b> method that returns the number of diffe=
+rent
+      (<b>unique</b>) values in the <b>Bag</b>.
+    For example, for the <b>Bag</b> in the discussion of <b>__init__</b> th=
+e
+        <b>unique</b> method would return <b>4</b>, because there are four
+        different values in the <b>Bag</b>; contrast this method with
+        <b>__len__</b>.
+<p>     =20
+</p></li><li>Define a <b>__contains__</b> method that returns whether or no=
+t its
+      argument is in the <b>Bag</b> (one or more times).
+<p>
+</p></li><li>Define a <b>count</b> method that returns the number of times =
+its argument
+      is in the <b>Bag</b>: <b>0</b> if the argument is not in the <b>Bag</=
+b>.
+<p>
+</p></li><li>Define an <b>add</b> method that adds its argument to the <b>B=
+ag</b>: if
+      that value is already in the <b>Bag</b>, its count is incremented by
+      <b>1</b>; if it is not already in the <b>Bag</b>, it is added to the
+      <b>Bag</b> with a count of <b>1</b>.
+<p>
+</p></li><li>Define an <b>__add__</b> method that unions its two <b>Bag</b>=
+ operands:
+      it returns a new <b>Bag</b> with all the values in <b>Bag</b> operand=
+s.
+    For example: <b>str(Bag(['a','b']) + Bag(['b','c']))</b> should be
+      <b>'Bag(a[1],b[2],c[1])'</b>
+    Neither <b>Bag</b> operand should change.
+<p>
+</p></li><li>Define a <b>remove</b> method that removes its argument from t=
+he
+      <b>Bag</b>: if that value is already in the <b>Bag</b>, its count is
+      decremented by <b>1</b> (and if the count reduces to <b>0</b>, the va=
+lue
+      is removed from the dictionary; if it is not in the <b>Bag</b>, raise=
+ a
+      <b>ValueError</b> exception, with an appropriate message that include=
+s
+      the value that could not be removed.
+<p>
+</p></li><li>Define <b>__eq__</b>/<b>__ne__</b> methods that return whether=
+ one
+      <b>Bag</b> is equal/not equal to another: contains the same values th=
+e
+      same number of times.
+    A <b>Bag</b> is not equal to anything whose type is not a <b>Bag</b>
+    This this method should not change either <b>Bag</b>.
+<p>
+</p></li><li>Define an <b>__iter__</b> method that that returns an object o=
+n which
+      <b>next</b> can be called to produce every value in the <b>Bag</b>: a=
+ll
+      <b>len</b> of them.
+    For example, for the <b>Bag</b> in the discussion of <b>__init__</b>,=
+=20
+      the following code
+<b><pre>  for i in x:
+      print(i,end=3D'')</pre></b>
+would print
+<b><pre>  acbbddd</pre></b>
+    Bags like sets are not sorted, so these 7 values can appear in any orde=
+r.
+<p>
+Ensure that the iterator produces those values in the <b>Bag</b> at the tim=
+e
+      the iterator starts executing; so mutating the <b>Bag</b> afterwards,
+      or even during the iteration, will <b>not</b> affect what values it
+      produces.
+</p><p>
+    <b>Hint</b>: Write this method as a call to a local generator, passing =
+a
+      copy of the dictionary (covered in Friday's lecture in Week 4).
+</p></li></ol>
+I have shown only examples of <b>Bag</b>s storing strings, because they are
+  convenient to write.
+But bags can store any type of data.
+The <b>__repr__</b>, <b>__str__</b>, and <b>__iter__/__next__</b> methods m=
+ust
+  be written independently: neither should call the other to get things don=
+e.
+<p>
+</p><h3>Testing</h3>
+The <b>bag.py</b> module includes a script that calls <b>driver.driver()</b=
+>.
+The project folder contains a <b>bsc1.txt</b> file (examine it) to use for
+   batch-self-checking your class.
+These are rigorous but not exhaustive tests.
+Incrementally write and test your class; check each method as you write it.
+<p>
+Note that when exceptions are raised, they are printed by the driver but th=
+e=20
+  <b>Command:</b> prompt sometimes appears misplaced.
+</p><p>
+You can write other code at the bottom of your <b>bag.py</b> module to test=
+ the
+  <b>Bag</b> class, or type code into the driver as illustrated below.
+Notice the default for each command is the command previously entered.
+<b></b></p><pre><b>  Driver started
+  Command[!]: from bag import Bag
+  Command[from bag import Bag]: b =3D Bag(['d','a','b','d','c','b','d'])
+  Command[b =3D Bag(['d','a','b','d','c','b','d'])]: print(b)
+  Bag(a[1], b[2], c[1], d[3])
+  Command[len(b)]: print(len(b))
+  7
+  Command[print(len(b))]: print(b.count('d'))
+  3
+  Command[print(b.count('d'))]: quit
+  Driver stopped</b></pre>
+</td>
+</tr></tbody>
+</table>
+
+
+<!-- Problem 2 -->
+
+</a><a name=3D"problem1">
+<hr align=3D"left" width=3D"33%">
+<table cellspacing=3D"0" cellpadding=3D"5" border=3D"0" rules=3D"none" widt=
+h=3D"100%">
+<tbody>
+<tr valign=3D"top">
+<td width=3D"20%"><b>Problem #2: DictList Class (operators)</b></td>
+<td width=3D"80%">
+<h3>Problem Summary:</h3>
+The <b>DictList</b> class represents a <b>list</b> of <b>dict</b>, with som=
+e
+  keys appearing in more than one <b>dict</b>: think of the later <b>dict</=
+b>s
+  as representing updates to the earlier ones, but the earlier ones are sti=
+ll
+  remembered earlier in the list.
+For example, if we define either
+<b><pre>  d =3D DictList(dict(a=3D1,b=3D2,c=3D3), dict(c=3D13,d=3D14,e=3D15=
+), dict(e=3D25,f=3D26,g=3D27))</pre></b>
+or=20
+<b><pre>  d =3D DictList({'a':1, 'b':2, 'c':3}, {'c':13, 'd':14, 'e':15}, {=
+'e':25, 'f':26, 'g':27})</pre></b>
+<p>
+the key <b>'c'</b> appears in the first and second dictionary; the key
+  <b>'e'</b> appears in the second and third dictionary.
+The other keys (<b>'a'</b>, <b>'b'</b>, <b>'d'</b>, <b>'f'</b>, and <b>'g'<=
+/b>)
+  appear in only a single dictionary.
+In methods below, we will overload <b>__getitem__</b> so that
+  <b>d['c']</b> returns <b>13</b>, because the last (highest index) diction=
+ary
+  that contains <b>'c'</b> as a key associates <b'c'< b=3D""> with the valu=
+e
+  <b>13</b>.
+</b'c'<></p><p>
+
+</p><h3>Details</h3>
+<ol>
+<li>Define a class named <b>DictList</b> in a module named
+  <b>dictlist.py</b>.
+<p>
+</p></li><li>Define an <b>__init__</b> method that has one parameter: it ma=
+tches=20
+      one or more arguments, where each argument is expected to be a dictio=
+nary.
+    See the example above, which creates a <b>DictList</b> object with thre=
+e
+      dictionaries.
+    <p>
+    If there are no dictionaries or if any argument is not a dictionary, or=
+ if
+        any dictionary is empty, this method must raise an
+        <b>AssertionError</b> exception with an appropiate message.
+    For example, in my code writing <b>DictList(1)</b> raises=20
+       <b>AssertionError</b> with the message
+       <b>DictList.__init__: 1 is not a dictionary</b>.
+    </p><p>
+    If there are one or more dictionaries as arguments, store them in a
+       <b>list</b> in the <b>same order</b>: e.g., first argument dictionar=
+y
+       is stored at index <b>0</b>..
+    </p><p>
+    <b>IMPORTANT</b>: You <b>must</b> use the name <b>self.dl</b> (lower-ca=
+se
+         <b>D</b> followed by <b>L</b>) to store the <b>list</b> constructe=
+d
+         from the argument dictionaries.
+    The name <b>self.dl</b> is used in some tests in the batch self-check f=
+ile.
+    Store only this attribute: store <b>no</b> other <b>self</b> variables =
+in
+      this class.
+</p><p>
+</p></li><li>Define a <b>__len__</b> method that returns the number of dist=
+inct keys in
+      all the dictionaries in the <b>DictList</b>.
+    For example <b>len(d)</b> for
+<b><pre>  d =3D DictList({'a':1, 'b':2, 'c':3}, {'c':13, 'd':14, 'e':15}, {=
+'e':25, 'f':26, 'g':27})</pre></b>
+    is <b>7</b>, because there are seven distinct keys in <b>d</b>:
+    <b>'a'</b>, <b>'b'</b>, <b>'c'</b>, <b>'d'</b>, <b>'e'</b>, <b>'f'</b>,
+    and <b>'g'</b>.
+<p>
+</p></li><li>Define a <b>__bool__</b> method that returns <b>False</b> if t=
+he
+      <b>DictList</b> object stores only one dictionary; it returns
+      <b>True</b> if it stores more than one dictionary.
+<p>
+</p></li><li>Define a <b>__repr__</b> method that returns a string, which w=
+hen
+      passed to <b>eval</b> returns a newly constructed <b>DictList</b> wit=
+h
+      the same dictionary arguments the <b>DictList</b> object <b>__repr__<=
+/b>
+      was called on.
+    <p>
+    The <b>DictList</b> example above, might (because the order of the
+     keys/values in each dictionary makes no difference) return the string.
+     <b></b></p><pre><b>"DictList({'a':1, 'c':3, 'b':2}, {'c':13, 'e':15, '=
+d':14}, {'g':27, 'f':26, 'e':25})"</b></pre>
+<p>
+</p></li><li>Define a <b>__contains__</b> method so that <b>in</b> returns =
+whether or
+      not its first argument is a key in <b>any</b> of the dictionaries in =
+a
+      <b>DictList</b>; it returns <b>True</b> if such a key is in <b>any</b=
+>
+      dictionary and <b>False</b> if such a key is not in <b>any</b> of the
+      dictionaries.<br>
+    Do <b>not</b> create any new data structures; iterate through the data
+      structure returning the correctly value as quickly as possible.
+<p>
+</p></li><li>Define a <b>__getitem__</b> method so that calling <b>d[k]</b>=
+=20
+      on <b>DictList</b> <b>d</b> returns the value associated with the
+      <b>latest</b> dictionary (the one with the highest index) in <b>d</b>=
+'s
+      list that has <b>k</b> as a key.
+    If the key is in <b>no</b> dictionaries in the list, this method
+       must raise the <b>KeyError</b> exception with an appropriate message=
+.
+    For example, in the <b>DictList</b>
+<b><pre>  d =3D DictList({'a':1, 'b':2, 'c':3}, {'c':13, 'd':14, 'e':15}, {=
+'e':25, 'f':26, 'g':27})</pre></b>
+    <ul>
+      <li><b>d['a']</b> returns <b>1</b>
+         (<b>'a'</b> is only in the first dictionary)
+      </li><li><b>d['d']</b> returns <b>14</b>
+         (<b>'d'</b> is only in the second dictionary)
+      </li><li><b>d['g']</b> returns <b>27</b>
+         (<b>'g'</b> is only in the second dictionary)
+      </li><li><b>d['c']</b> returns <b>13</b>
+         (<b>'c'</b> appears in the first and second dictionary: it returns=
+ the
+           associated value from the second dictionary).
+      </li><li><b>d['e']</b> returns <b>25</b>
+         (<b>'e'</b> appears in the second and third dictionary: it returns=
+ the
+           associated value from the third dictionary).
+      </li><li><b>d['x']</b> raises <b>KeyError</b>
+          (<b>'x'</b> appears in no dictionaries).
+    </li></ul>
+<p>
+</p></li><li>Define a <b>__setitem__</b> method so that executing <b>d[k] =
+=3D v</b>=20
+      on <b>DictList</b> <b>d</b> works as follows:
+    <ul>
+    <li><b>if</b> <b>k</b> is in at least one dictionary, <b>then</b> chang=
+e
+           the association of <b>k</b> to <b>v</b>, only in the last dictio=
+nary
+           (highest index) in which <b>k</b> is a key;
+           the number of dictionaries in the list remains the same
+    </li><li><b>if</b> <b>k</b> is not in any dictionaries, <b>then</b> cre=
+ate a new
+          dictionary at the <b>end</b> of the list of dictionaries, with on=
+ly
+          one item: associating <b>k</b> with <b>v</b> in that dictionary; =
+the
+          number of dictionaries in the list increases by one.
+    </li></ul>
+    <p>
+    For example, in the <b>DictList d</b>
+<b></b></p><pre><b>  d =3D DictList({'a':1, 'b':2, 'c':3}, {'c':13, 'd':14,=
+ 'e':15}, {'e':25, 'f':26, 'g':27})</b></pre>
+    if we wrote <b>d['c'] =3D 'new'</b> then only the dictionary in index 1=
+ (the
+      last one/highest index with key <b>'c'</b>) would change <b>'c'</b>s =
+to
+      associate with <b>'new'</b>.
+    It would now be
+<b><pre>  DictList({'a':1, 'b'2, 'c':3}, {'c':'new', 'd':14, 'e':15}, {'e':=
+25, 'f':26, 'g':27})</pre></b>
+    <p>
+    In the example above, if we instead wrote <b>d['x'] =3D 'new'</b> then =
+a new
+      dictionary would be appended to the list (with <b>'x'</b> associated =
+with
+      <b>'new'</b> in that dictionary).
+    It would now be
+<b></b></p><pre><b>  DictList({'a':1,'b':2,'c':3},{'c':13,'d':14,'e':15},{'=
+e':25,'f':26,'g':27},{'x':'new'})</b></pre>
+<p>
+
+</p></li><li>Define a <b>__delitem__</b> method so that executing <b>del d[=
+k]</b>=20
+      on <b>DictList</b> <b>d</b> works as follows:
+    <ul>
+    <li><b>if</b> <b>k</b> is in at least one dictionary, <b>then</b> delet=
+e
+           the key <b>k</b> only in the last dictionary (highest index) in
+           which <b>k</b> is a key; if that dictionary becomes empty, remov=
+e
+           it from the list (the number of dictionaries in the list decreas=
+es
+           by one).
+    </li><li><b>if</b> <b>k</b> is not in any dictionaries, <b>then</b> rai=
+se a
+          KeyError exception with an appropriate message.
+    </li></ul>
+    <p>
+    For example, in the <b>DictList d</b>
+<b></b></p><pre><b>  d =3D DictList({'a':1, 'b':2, 'c':3}, {'c':13, 'd':14,=
+ 'e':15}, {'e':25, 'f':26, 'g':27})</b></pre>
+    if we wrote <b>del d['c']</b> then only the dictionary in index 1 (the
+      last one/highest index with key <b>'c'</b>) would delete <b>'c'</b> f=
+rom
+      its keys.
+    It would now be
+<b><pre>  DictList({'a':1, 'b'2, 'c':3}, {'d':14, 'e':15}, {'e':25, 'f':26,=
+ 'g':27})</pre></b>
+    <p>
+    In the example above, if we instead wrote <b>del d['x']</b> then Python
+      would raise a <b>KeyError</b> exceptiohn.
+</p><p>
+</p></li><li>Define ae <b>__call__</b> method so that calling <b>d(k)</b>
+      on <b>DictList</b> <b>d</b> returns a list of 2-tuples: the list inde=
+x
+      for every dictionary in which <b>k</b> is a key and its associated va=
+lue
+      in that dictionary.
+    If the key is in no dictionaries in the list, it returns <b>[]</b>.
+    In the example above
+    <ul>
+      <li><b>d('a')</b> returns <b>[(0, 1)]</b>
+               (it is only in the list's index-<b>0</b> dictionary, with an
+                associated value of <b>1</b>)
+      <p>
+      </p></li><li><b>d('e')</b> returns <b>[(1, 15), (2, 25)]</b>
+               (it is in the list's index-<b>1</b> dictionary, with an
+                associated value of <b>15</b> and=20
+                it is in the list's index-<b>2</b> dictionary, with an
+                associated value of <b>25</b>)
+      <p>
+      </p></li><li><b>d('x')</b> returns <b>[]</b>
+               (it is in no dictionaries)
+    </li></ul>
+    <p>
+    Note that the indexes that appear first in the the 2-tuple must be
+      increasing: for <b>d('e')</b> the uniquely correct answer is
+      <b>[(1, 15), (2, 25)]</b>; the following answer is <b>wrong</b>:
+      <b>[(2, 25), (1, 15)]</b>.
+</p><p>
+</p></li><li>Define an <b>__iter__</b> method so that it produces keys acco=
+rding to the
+    following rules.
+    <ul>
+      <li>Each key is produced only once, from the last (highest) index
+           dictionary in which it appears.
+      </li><li>All the keys in each dictionary are produced in alphabetical=
+ly sorted
+            order.
+    </li></ul>
+    <p>
+    These requirements ensure that there is only one correct sequence of
+       values produced by the iterator.
+    For the <b>DictList d</b>
+<b></b></p><pre><b>  d =3D DictList(dict(a=3D1,b=3D2,c=3D3), dict(c=3D13,d=
+=3D14,e=3D15), dict(e=3D25,f=3D26,g=3D27)</b></pre>
+  the values are produced in the order
+<b><pre>  'e', 'f', 'g', 'c', 'd', 'a', 'b'</pre></b>
+    Note that the keys <b>'e'</b>, <b>'f'</b>, and <b>'g'</b> are produced
+      in alphabetical order from the <b>index-2</b> dictionary;=20
+    the keys <b>'c'</b> and <b>'d'</b> are produced in alphabetical order f=
+rom
+       the <b>index-1</b> dictionary (key <b>'e'</b> has already been produ=
+ced);
+    they keys <b>'a'</b> and <b>'b'</b> are produced in alphabetical order =
+from
+       the <b>index-0</b> dictionary (key <b>'c'</b> has already been produ=
+ced).
+<p>
+<b>Hints:</b>
+</p><ul>
+  <li>Use a <b>generator</b> to write this method.
+  </li><li>You may use another local data structure to ensure that you don'=
+t produce
+        the same key twice (given that the same key may appear in many
+        dictionaries in the list).
+</li></ul>
+<p>
+</p></li><li>Define an <b>items</b> method (taking no arguments) so that it=
+ produces
+      2-tuples (containing key-value pairs) according to the following rule=
+s.
+    <ul>
+      <li>Each key is produced only once, from the last (highest) index
+           dictionary in which it appears.
+      </li><li>All the keys in each dictionary are produced in alphabetical=
+ly sorted
+            order.
+    </li></ul>
+    <p>
+    These requirements ensure that there is only one correct sequence of
+       values produced by the iterator.
+    For the <b>DictList d</b>
+<b></b></p><pre><b>  d =3D DictList(dict(a=3D1,b=3D2,c=3D3), dict(c=3D13,d=
+=3D14,e=3D15), dict(e=3D25,f=3D26,g=3D27)</b></pre>
+  the values are produced in the order
+<b><pre>  ('e', 25), ('f', 26), ('g', 27), ('c', 13), ('d', 14), ('a', 1), =
+('b', 2)</pre></b>
+    Note that the keys <b>'e'</b>, <b>'f'</b>, and <b>'g'</b> are produced
+      in alphabetical order from the <b>index-2</b> dictionary;=20
+    the keys <b>'c'</b> and <b>'d'</b> are produced in alphabetical order f=
+rom
+       the <b>index-1</b> dictionary (key <b>'e'</b> has already been produ=
+ced);
+    the keys <b>'a'</b> and <b>'b'</b> are produced in alphabetical order f=
+rom
+    the <b>index-0</b> dictionary (key <b>'c'</b> has already been produced=
+).
+<p>
+<b>Hints:</b> See above (or just use the <b>__iter__</b> method).
+</p><p>
+</p></li><li>Define a <b>collapse</b> method (taking no arguments) that ret=
+urns a
+      <b>dict</b> that is equivalent to the <b>DictList</b>: it has the sam=
+e
+      keys, and each key is associated with the value in the last dictionar=
+y
+      in which the key appears.
+    For the <b>DictList d</b>
+<b><pre>  d =3D DictList(dict(a=3D1,b=3D2,c=3D3), dict(c=3D13,d=3D14,e=3D15=
+), dict(e=3D25,f=3D26,g=3D27)</pre></b>
+  <b>d.collapse()</b> would return
+<b><pre>    {'a':1, 'b':2,'c':13, 'd':14, 'e':25, 'f':26, 'g':27} </pre></b=
+>
+<p>
+</p></li><li>Define the <b>=3D=3D</b> operator for comparing two <b>DictLis=
+t</b>s or for
+      comparing a <b>DictList</b> and a <b>dict</b> for equality.
+    We define the meaning of <b>d1 =3D=3D d2</b> as follows:
+    <ul>
+    <li>The keys in the left operand are the same as the keys in the right
+          operand. Here, the keys in a <b>DictList</b> are all the keys
+          appearing in any of the its dictionaries; the keys in a <b>dict</=
+b>
+          operand are all the keys in that dictionary (the standard meaning=
+).
+    <p>
+    and
+    </p><p>
+    </p></li><li>For all of the keys <b>k</b> computed above, <b>d1[k] =3D=
+=3D d2[k]</b>.
+        <b>[k]</b> in a <b>DictList</b> is the value associated with <b>k</=
+b>
+          in the latest dictionary (the one with the highest index in the l=
+ist);
+        <b>[k]</b> in a <b>dict</b> is the value assocated with key <b>k</b=
+>
+        (the standard meaning).
+    </li></ul>
+    <p>
+    If the right operand is neither a <b>DictList</b> nor a <b>dict</b>, ra=
+ise
+      the <b>TypeError</b> exception with an appropriate message.
+    </p><p>
+    For example, if <b>d1 =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12,c=3D1=
+3))</b> and
+      <b>d2 =3D DictList(dict(a=3D1,b=3D12), dict(c=3D13))</b> then
+      <b>d1 =3D=3D d2</b> is <b>True</b>:
+         both have keys <b>a</b>, <b>b</b>, and <b>c</b>; and, both have
+         <b>['a'] =3D=3D 1</b>, <b>['b'] =3D=3D 12</b>, and <b>['c'] =3D=3D=
+ 13</b>.
+    For the same reasons, <b>d1 =3D=3D dict(a=3D1,b=3D12,c=3D13)</b> would =
+also be
+         <b> True</b>.
+    </p><p>
+    But <b>d1 =3D=3D dict(a=3D1,c=3D13)</b> is <b>False</b> because the <b>=
+dict</b>
+      operand has no <b>'b'</b> key; and <b>d1 =3D=3D dict(a=3D1,b=3D2,c=3D=
+13)</b> is
+      <b>False</b> because the <b>d1['b'] =3D=3D 12</b> but the <b>dict</b>=
+ operand
+      associates <b>'b'</b> with the value <b>2</b>.
+</p><p>
+  <b>Hint:</b>=20
+  If you have implemented <b>__getitem__</b> correctly (in part 7), use it
+    here.
+</p><p>
+</p></li><li>Define the <b>&lt;</b> operator for comparing two <b>DictList<=
+/b>s or for
+      comparing a <b>DictList</b> and a <b>dict</b> for equality.
+    We define the meaning of <b>d1 &lt; d2</b> as follows:
+    <ul>
+    <li>The keys in the left operand are a strict subset of the keys in the
+          right operand.=20
+        See above for the defintion of "keys".
+        Strict subset means there are fewer keys in the left operand than t=
+he
+          right operand (and every key in the left operand is also in the r=
+ight
+          operand).
+    <p>
+    and
+    </p><p>
+    </p></li><li>For all of the keys <b>k</b> in the left operand, <b>d1[k]=
+ =3D=3D d2[k]</b>.
+    </li></ul>
+    <p>
+    If the right operand is neither a <b>DictList</b> nor a <b>dict</b>, ra=
+ise
+      the <b>TypeError</b> exception with an appropriate message.
+    </p><p>
+    For example, if <b>d1 =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12,c=3D1=
+3))</b> and
+      <b>d2 =3D DictList(dict(a=3D1,b=3D12), dict(c=3D13,d=3D14)</b> then
+      <b>d1 &lt; d2</b> is <b>True</b>:
+         <b>d1</b>'s keys (<b>a</b>, <b>b</b>, and <b>c</b>) are a strict
+        subset of <b>d2</b>'s keys (<b>a</b>, <b>b</b>, <b>c</b>, and <b>d<=
+/b>);
+        for <b>d1</b>'s keys, all have the same associated values in <b>d1<=
+/b>
+          and <b>d2</b>.
+    </p><p>
+    But <b>dict(a=3D1,x=3D13) &lt; d2 </b> is <b>False</b> because the <b>d=
+2</b>
+      operand has no <b>'x'</b> key; and <b>dict(a=3D1,b=3D2) &lt; d2</b> i=
+s
+      <b>False</b> because the the <b>dict</b> operand associates <b>'b'</b=
+>
+      with the value <b>2</b> but <b>d2['b'] =3D=3D 12</b>.
+</p><p>
+</p></li><li>Define the <b>&gt;</b> operator for comparing two <b>DictList<=
+/b>s or for
+      comparing a <b>DictList</b> and a <b>dict</b> for equality.
+    For any <b>DictList</b>s and <b>dict</b>s, <b>di</b> and <b>d2</b>,=20
+      <b>d1 &lt; d2</b> exactly when <b>d2 &gt; d1</b>.
+    By defining both these operators, we can successfully compute expressio=
+ns
+      involving <b>dict</b>s as the first operand, like <b>{} &lt; d1</b> a=
+nd
+      <b>{} &gt; d1</b> and=20
+<p>
+Note that the law of trichotomy does <b>not</b> hold for <b>DictList</b>s:
+  one can have two <b>DictList</b>s where the first is not less than, equal
+  to, or greater than the second.
+</p><p>
+</p></li><li>Define adding two <b>DictList</b>s and adding a <b>DictList</b=
+> and a
+      <b>dict</b> as follows.
+<p>
+    </p><ul>
+    <li>To add two <b>DictList</b>s, create a new <b>DictList</b> with a
+        list of dictionaries that contains a <b>copy</b> of all the
+         <b>dict</b>s in the left <b>DictList</b> operand (in order) follow=
+ed
+          by a <b>copy</b> of all the <b>dict</b>s in the right <b>DictList=
+</b>
+          operand (in order).
+        <p>
+        For example, if <b>d1 =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12,c=
+=3D13))</b> and
+          <b>d2 =3D DictList(dict(a=3D'one',b=3D'two'), dict(b=3D'twelve',c=
+=3D'thirteen'))</b>  then
+        <b>d1+d2</b> would be equivalent to=20
+<b></b></p><pre><b>  DictList({'a': 1, 'b': 2}, {'b': 12, 'c': 13}, {'a': '=
+one', 'b': 'two'}, {'b': 'twelve', 'c': 'thirteen'})</b></pre>
+        and <b>d2+d1</b> would be equivalent to
+<b></b><pre><b>  DictList({'a': 'one', 'b': 'two'}, {'b': 'twelve', 'c': 't=
+hirteen'}, {'a': 1, 'b': 2}, {'b': 12, 'c': 13})</b></pre>
+        So addition is not commutative for the <b>DictList</b> class:
+          <b>d1+d2</b> produces a different result than <b>d2+d1</b>.
+        <p>
+        Note the use of <b>copy</b> in the specifications above: changing a=
+n
+          argument dictionary after <b>+</b> should not affect the resultin=
+g
+          dictionary.
+        For example, if we declare <b>d1</b> and <b>d2</b> as above, and co=
+mpute
+        <b>d =3D d1+d2</b> and then write <b>d1['c'] =3D 'new'</b> nothing =
+is
+        changed in <b>d</b>.
+     </p><p>
+    </p></li><li>To add <b>DictList + dict</b>, create a new <b>DictList</b=
+> with a
+        list of dictionaries that contains a <b>copy</b> of all the
+         <b>dict</b>s in the <b>DictList</b> operand (in order) followed by=
+ a
+         <b>copy</b> of the <b>dict</b> operand.
+        <p>
+        For example, if <b>adl =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12,=
+c=3D13))</b> and
+          <b>adict =3D dict(a=3D'one',b=3D'two')</b>  then
+        <b>adl+adict</b> would return the equivalent to=20
+<b></b></p><pre><b>  DictList({'a': 1, 'b': 2}, {'b': 12, 'c': 13}, {'a': '=
+one', 'b': 'two'})</b></pre>
+     <p>
+     </p></li><li>To add <b>dict + DictList</b>, create a new <b>DictList</=
+b> with a
+         list of dictionaries that contains a <b>copy</b> of <b>dict</b> op=
+erand
+         followed a <b>copy</b> of all the <b>dict</b>s in the <b>DictList<=
+/b>
+         operand (in order).
+         <p>
+         For example, if <b>adl =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12=
+,c=3D13))</b> and
+         <b>adict =3D dict(x=3D'anx',b=3D'two')</b>  then
+        <b>adict+adl</b> would be return the equivalent to=20
+<b></b></p><pre><b>  DictList({'x': 'anx', 'b': 'two'}, {'a': 1, 'b': 2}, {=
+'b': 12, 'c': 13})</b></pre>
+    </li></ul>
+    <p>
+    If the right operand isn't a a <b>DictList</b> or a <b>dict</b>, raise
+      <b>TypeError</b> with an appropriate message.
+</p><p>
+</p></li><li>Define a <b>__setattr__</b> method that ensures objects in the
+      <b>DictList</b> class cannot store new attributes: they store
+      only <b>dl</b>.
+    The methods you will write should never bind any instance names
+       (except in  <b>__init__</b>, which initializes <b>dl</b>) but
+       exclusively returns newly constructed <b>DictList</b> objects with t=
+he
+       correct values.
+    If an attempt is made to add new attributes to an object (by defining a=
+ new
+      attribute or rebinding an existing attribute), raise an
+      <b>AssertionError</b> with an appropriate message.
+    <p>
+    Do not attempt to solve this part of the problem until all other parts
+      are working correctly.
+    If you fail to solve this part correctly comment out this method so tha=
+t
+      the other batch self-check tests pass.
+</p><p>
+</p></li><li>You may define other (helper) Python methods in this class, bu=
+t you do not
+      have to define any.
+</li></ol>
+<p>
+
+</p><h3>Testing</h3>
+The <b>dictlist.py</b> module includes a script that does some simple
+  <b>DictList</b> manipulations and then calls <b>driver.driver()</b>.
+The project folder contains a <b>bsc2.txt</b> file (examine it) to use for
+   batch-self-checking your class.
+These are rigorous but not exhaustive tests.
+Incrementally write and test your class: writing some methods may create a
+  pattern you can reuse for the others.
+<p>
+Note that when exceptions are raised, they are printed by the driver but th=
+e=20
+  <b>Command:</b> prompt sometimes appears misplaced.
+</p><p>
+You can also test code you type into the driver as illustrated below; but i=
+f you
+  want to perform the same test over and over again when debugging, it is
+  better to put this code in the script before the driver is called.
+Notice the default for each command (printed in the square brackets) is the
+  command previously entered.
+<b></b></p><pre><b>  Driver started
+  Command[!]: from dictlist import DictList
+  Command[from dictlist import DictList]: d =3D DictList(dict(a=3D1,b=3D2),=
+ dict(b=3D12,c=3D13))
+  Command[d =3D DictList(dict(a=3D1,b=3D2), dict(b=3D12,c=3D13))]: print(d)
+  DictList({'b': 2, 'a': 1}, {'c': 13, 'b': 12})
+  Command[print(d)]: print(d['b'])
+  12
+  Command[print(d['b'])]: print(d('b'))
+  [(0, 2), (1, 12)]
+  Command[print(d('b'))]: print(d.collapse())
+  {'c': 13, 'b': 12, 'a': 1}
+  Command[print(d.collapse())]: print( (d+dict(b=3D22)).collapse() )
+  {'c': 13, 'b': 22, 'a': 1}
+  Command[print( (d+dict(b=3D22)).collapse() )]: quit
+  Driver stopped</b></pre>
+</td>
+</tr></tbody>
+</table>
+
+
+
+</a></body></html>
+------MultipartBoundary--KTcUM7OkyDOTBCPJpRVklconWYks9bgTEvMarrToEW----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-d3e5db17-6935-4222-bbd2-740cec8bdcc9@mhtml.blink
+
+@charset "utf-8";
+=0A
+------MultipartBoundary--KTcUM7OkyDOTBCPJpRVklconWYks9bgTEvMarrToEW----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa
+
+@charset "utf-8";
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 200; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 200; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 200; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 200; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 200; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 300; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 500; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 500; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 500; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 500; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 500; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 600; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 600; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 600; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 600; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 600; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 800; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 800; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 800; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 800; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 800; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 900; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0gotcqA.woff2=
+") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2=
+DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 900; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk2wotcqA.woff2=
+") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, =
+U+2116; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 900; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0AotcqA.woff2=
+") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-1=
+69, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 900; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk0QotcqA.woff2=
+") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+2020, U=
++20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Mulish; font-style: normal; font-weight: 900; src=
+: url("https://fonts.gstatic.com/s/mulish/v12/1Ptvg83HX_SGhgqk3wot.woff2") =
+format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6,=
+ U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,=
+ U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--KTcUM7OkyDOTBCPJpRVklconWYks9bgTEvMarrToEW------
